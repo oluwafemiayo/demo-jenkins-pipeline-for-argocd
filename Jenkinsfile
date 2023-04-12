@@ -28,7 +28,7 @@ node {
     }
     
     stage('Trigger ManifestUpdate') {
-                echo "triggering updatemanifestjob"
-                build job: 'updatemanifest', parameters: [string(name: 'PYTHON-CD', value: env.BUILD_NUMBER)]
+                echo "triggering python-cd-job"
+                build job: 'python-cd-job', parameters: [string(name: 'PYTHON-CD', value: env.BUILD_NUMBER)]
         }
 }
